@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Andrew Chung-ang Tsao</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap"
+        rel="stylesheet">
+    <style>
+        html {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Raleway", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 200;
+            font-style: normal;
+        }
+
+        main {
+            padding: 15% 15%;
+        }
+
+        body {
+            background-color: #000000;
+            margin: 0px;
+            padding: 0px;
+            color: #f2efe2;
+        }
+
+        .logo img {
+            height: 60px;
+            width: auto;
+        }
+
+        .header {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            padding: 1% 1%;
+            background: #000000;
+            color: #fdd000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+            z-index: 100;
+        }
+
+        .navbar a {
+            box-shadow: inset 0 0 0 0 #e3a765;
+            color: #fdd000;
+            transition: color .5s ease-in-out, box-shadow .3s ease-in-out;
+            font-size: 20px;
+            text-decoration: none;
+            padding: 0 15px;
+        }
+
+        .navbar a.current {
+            color: #5d6d7c;
+            text-decoration: underline;
+        }
+
+        .navbar a:hover {
+            color: #f2efe2;
+            box-shadow: inset 200px 0 0 0 #e3a765;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.8rem;
+            color: #5d6d7c;
+        }
+
+        .navbar-toggler {
+            display: none;
+            font-size: 24px;
+            background: none;
+            border: none;
+            color: #fdd000;
+            cursor: pointer;
+        }
+
+        .yellow-text {
+            color: #fdd000;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .navbar-toggler {
+                display: block;
+            }
+
+            .navbar {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                background-color: #000;
+            }
+
+            .navbar a {
+                display: block;
+                width: 100%;
+                text-align: center;
+                padding: 10px;
+                border-top: 1px solid #e3a765;
+            }
+
+            .header {
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 10px;
+            }
+
+            .logo img {
+                height: 40px;
+            }
+        }
+
+        @keyframes reveal {
+            from {
+                opacity: 0;
+                clip-path: inset(50% 50% 50% 50%);
+            }
+
+            to {
+                opacity: 1;
+                clip-path: inset(0% 0% 0% 0%);
+            }
+        }
+
+        .revealing-image {
+            width: 100%;
+            height: auto;
+            animation: 2.5s ease-out 0s 1 normal both reveal;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo">
+            <img src="../logo.jpg" alt="Andrew's Logo">
+        </a>
+        <nav class="navbar" id="navbarMenu">
+            <a href="../">Home</a>
+            <a href="../about/">About</a>
+            <a href="../projects/">Projects</a>
+            <a href="../contact/">Contact</a>
+            <a href="#" class="current">More</a>
+        </nav>
+        <button class="navbar-toggler" type="button" onclick="toggleNavbar()">
+            <span class="navbar-toggler-icon">&#9776;</span>
+        </button>
+    </header>
+    <main class="container">
+        <section class="about-me">
+            <h1><span class="yellow-text">Welcome!</span></h1>
+            <p>As a huge fan of our galaxy and capturing moments, I enjoy night sky star photography, especially the
+                milky way.</p>
+            <h3>Did you know...</h3>
+            <ul>
+                <li><strong><span class="yellow-text">Maya Civilization:</span></strong> The Maya were advanced
+                    astronomers, constructing their complex calendar system based on celestial movements. They believed
+                    the Milky Way was the pathway to the underworld and played a crucial role in predicting celestial
+                    events.</li>
+                <li><strong><span class="yellow-text">Ancient Greeks:</span></strong> To the Greeks, the galaxy was
+                    known as the "Milky Circle," created from the milk of Hera, queen of the gods. The constellations
+                    and stars were deeply integrated into their myths, heroes, and the very fabric of their culture.
+                </li>
+                <li><strong><span class="yellow-text">Aboriginal Australians:</span></strong> One of the oldest cultures
+                    in the world, Aboriginal Australians have a rich tradition of astronomical knowledge. They saw the
+                    dark patches in the Milky Way as a celestial emu, and these star patterns are integral to their
+                    stories and cultural ceremonies.</li>
+            </ul>
+            <p>As a huge fan of our galaxy and capturing moments, I enjoy night sky star photography, especially the
+                milky way.</p>
+            <img src="../pic.png" alt="Star Photography by Andrew" class="revealing-image">
+        </section>
+    </main>
+    <script>
+        function toggleNavbar() {
+            var element = document.getElementById("navbarMenu");
+            if (element.style.display === "block") {
+                element.style.display = "none";
+            } else {
+                element.style.display = "block";
+            }
+        }
+    </script>
+</body>
+
+</html>

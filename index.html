@@ -1,14 +1,236 @@
 <!DOCTYPE html>
-<html>
-    <div>
-        Hello and welcome to Chung-ang Tsao's Page
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrew Chung-ang Tsao's Official Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap"
+        rel="stylesheet">
+    <style>
+        html {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Raleway", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 200;
+            font-style: normal;
+        }
+
+        body {
+            margin: 0px;
+            padding: 0px;
+            color: #f2efe2;
+            background-image: url('rome.jpeg');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+
+        }
+
+        .logo img {
+            height: 60px;
+            width: auto;
+        }
+
+        .header {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            padding: 1% 1%;
+            background: #000000;
+            color: #fdd000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+            z-index: 100;
+        }
+
+        .navbar a {
+            box-shadow: inset 0 0 0 0 #e3a765;
+            color: #fdd000;
+            padding: 0 .25rem;
+            margin: 0 -.25rem;
+            transition: color .5s ease-in-out, box-shadow .3s ease-in-out;
+            font-size: 20px;
+            text-decoration: none;
+            padding: 0 15px;
+        }
+
+        .navbar a.current {
+            color: #5d6d7c;
+            text-decoration: underline;
+        }
+
+        .navbar a:hover {
+            color: #f2efe2;
+            box-shadow: inset 200px 0 0 0 #e3a765;
+            ;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: stretch;
+            align-items: center;
+            height: 250vh;
+        }
+
+        .one {
+            font-family: "Raleway", sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+            width: 100%;
+            background-color: #000000;
+            font-size: xx-large;
+            flex: 2;
+        }
+
+        .two {
+            background-color: transparent;
+            flex: 1;
+        }
+
+        .three {
+            color: #fdd000;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            background-color: #000000;
+            font-family: "Roboto Slab", serif;
+            font-size: medium;
+            width: 100%;
+            font-size: 100%;
+            padding: 0% 15%;
+            flex: 2;
+        }
+
+        .yellow-text {
+            font-size: 300%;
+            color: #fdd000;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.8rem;
+            color: #5d6d7c;
+        }
+
+        .navbar-toggler {
+            display: none;
+            font-size: 24px;
+            background: none;
+            border: none;
+            color: #fdd000;
+            cursor: pointer;
+
+        }
+
+        @media only screen and (max-width: 768px) {
+            .navbar-toggler {
+                display: block;
+            }
+
+            .navbar {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                background-color: #000;
+            }
+
+            .navbar a {
+                display: block;
+                width: 100%;
+                text-align: center;
+                padding: 10px;
+                border-top: 1px solid #e3a765;
+            }
+
+            .header {
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 10px;
+            }
+
+            .one,
+            .yellow-text {
+                font-size: 6vw;
+            }
+
+            .two {
+                padding: 10px;
+                text-align: center;
+                font-size: 2vw;
+            }
+
+            .logo img {
+                height: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo">
+            <img src="logo.jpg" alt="Andrew's Logo">
+        </a>
+        <nav class="navbar" id="navbarMenu">
+            <a href="#" class="current">Home</a>
+            <a href="./about/">About</a>
+            <a href="./projects/">Projects</a>
+            <a href="./contact/">Contact</a>
+            <a href="./more/">More</a>
+        </nav>
+
+        <button class="navbar-toggler" type="button" onclick="toggleNavbar()">
+            <span class="navbar-toggler-icon">&#9776;</span>
+        </button>
+    </header>
+    <div class="container">
+        <div class="one">
+            <p>The official page of </p>
+            <p><span class="yellow-text">Andrew Chung-ang Tsao</span></p>
+        </div>
+        <div class="two"></div>
+        <div class="three">
+            <h3>Good qoute of the day:</h3>
+            <p>"Adapt yourself to the environment in which your lot has been cast, and show true love to the
+                fellow-mortals with whom destiny has surrounded you.</p>
+            <p>Οἷς συγκεκλήρωσαι πράγμασι, τούτοις συνάρμοζε σεαυτόν, καὶ οἷς συνείληχας ἀνθρώποις, τούτους φίλει, ἀλλ
+                ἀληθινῶς."</p>
+            <p>Marcus Aurelius, Meditations VI, 39</p>
+        </div>
     </div>
-    <div>
-        <a href="./about/">About Me</a>
-        <a href="./help/">Help Page Here</a>
-    </div>
+    <footer class="footer">
+        <p>&copy; 2024 Andrew Chung-ang Tsao. All rights reserved.</p>
+    </footer>
+    <script>
+        function toggleNavbar() {
+            var element = document.getElementById("navbarMenu");
+            if (element.style.display === "block") {
+                element.style.display = "none";
+            } else {
+                element.style.display = "block";
+            }
+        }
+
+    </script>
 
 
+</body>
 
 </html>
-

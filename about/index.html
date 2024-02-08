@@ -1,7 +1,247 @@
 <!DOCTYPE html>
-<html>
-    <div>
-        <h1>About Me Page</h1>
-        <p>It's me</p>
-    </div>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Andrew Chung-ang Tsao</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap"
+        rel="stylesheet">
+    <style>
+        html {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Raleway", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 200;
+            font-style: normal;
+        }
+
+        body {
+            background-color: #000000;
+            margin: 0px;
+            padding: 0px;
+            color: #f2efe2;
+        }
+
+        .logo img {
+            height: 60px;
+            width: auto;
+        }
+
+        .header {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            padding: 1% 1%;
+            background: #000000;
+            color: #fdd000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+            z-index: 100;
+        }
+
+        .navbar a {
+            box-shadow: inset 0 0 0 0 #e3a765;
+            color: #fdd000;
+            transition: color .5s ease-in-out, box-shadow .3s ease-in-out;
+            font-size: 20px;
+            text-decoration: none;
+            padding: 0 15px;
+        }
+
+        .navbar a.current {
+            color: #5d6d7c;
+            text-decoration: underline;
+        }
+
+        .navbar a:hover {
+            color: #f2efe2;
+            box-shadow: inset 200px 0 0 0 #e3a765;
+        }
+
+        .about-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 100px;
+        }
+
+        .hero-section,
+        .bio,
+        .philosophy {
+            text-align: center;
+            padding: 50px 10%;
+        }
+
+        .hero-section h1,
+        .bio h2,
+        .philosophy h2 {
+            color: #fdd000;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.8rem;
+            color: #5d6d7c;
+        }
+
+        .navbar-toggler {
+            display: none;
+            font-size: 24px;
+            background: none;
+            border: none;
+            color: #fdd000;
+            cursor: pointer;
+
+        }
+
+        .scrolling-words-container {
+            display: flex;
+            align-items: center;
+            font-size: 2rem;
+            font-weight: 600;
+            margin-top: 100px;
+        }
+
+        .scrolling-words-box {
+            height: 3rem;
+            overflow: hidden;
+        }
+
+        .scrolling-words-box ul {
+            animation: scrollUp 6s linear infinite;
+            padding-left: 0;
+        }
+
+        .scrolling-words-box ul li {
+            list-style-type: none;
+            align-items: center;
+            justify-content: flex-start;
+            height: 3rem;
+            display: flex;
+        }
+
+        @keyframes scrollUp {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(-100%);
+            }
+        }
+
+
+
+        @media only screen and (max-width: 768px) {
+            .navbar-toggler {
+                display: block;
+            }
+
+            .navbar {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                background-color: #000;
+            }
+
+            .navbar a {
+                display: block;
+                width: 100%;
+                text-align: center;
+                padding: 10px;
+                border-top: 1px solid #e3a765;
+            }
+
+            .header {
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 10px;
+            }
+
+            .logo img {
+                height: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo">
+            <img src="../logo.jpg" alt="Andrew's Logo">
+        </a>
+        <nav class="navbar" id="navbarMenu">
+            <a href="../">Home</a>
+            <a href="#" class="current">About</a>
+            <a href="../projects/">Projects</a>
+            <a href="../contact/">Contact</a>
+            <a href="../more/">More</a>
+        </nav>
+        <button class="navbar-toggler" type="button" onclick="toggleNavbar()">
+            <span class="navbar-toggler-icon">&#9776;</span>
+        </button>
+    </header>
+    <main class="about-container">
+        <div class="scrolling-words-container">
+            <span style="color: #fdd000">I am a &nbsp;</span>
+            <div class="scrolling-words-box">
+                <ul>
+                    <li><span style="color: #f61b1b">student.</span></li>
+                    <li><span style="color: #1804ce">engineer.</span></li>
+                    <li><span style="color: #21bae0">developer</span></li>
+                    <li><span style="color: #07e40e">biologist.</span></li>
+                    <li><span style="color: #bc11da">coder.</span></li>
+                    <li><span style="color: #e3a765">scientist.</span></li>
+                    <li><span style="color: #ffffff">human.</span></li>
+                    <li><span style="color: #ffffff">&nbsp;</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <section class="hero-section">
+            <h1>About Andrew</h1>
+            <p>This is an article about Andrew Chung-ang Tsao and the journey through innovation and design. </p>
+
+        </section>
+
+        <section class="bio">
+            <h2>Biography</h2>
+            <p>Andrew Chung-ang Tsao, a human being born on planet Earth's most prestigious land mass, is now on the
+                journey to find purpose within the vast and empty space we locate in. Seeking to pioneer in the field of
+                digital innovation, a novel idea that blends technology with art and biology to create experiences that
+                transcend the ordinary. With a career spanning around two years, Andrew has been at the forefront of
+                digital design and futuristic aesthetics of a minor field named Modern Digifuturaestheticism.</p>
+        </section>
+        <section class="philosophy">
+            <h2>Philosophy</h2>
+            <p>"To envision the future, one must first understand the possibilities of the presented to similar pasts."
+                Andrew's work is rooted in the belief that technology not only shapes our daily lives but also our
+                dreams and aspirations. </p>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2024 Andrew Chung-ang Tsao. All rights reserved.</p>
+    </footer>
+    <script>
+        function toggleNavbar() {
+            var element = document.getElementById("navbarMenu");
+            if (element.style.display === "block") {
+                element.style.display = "none";
+            } else {
+                element.style.display = "block";
+            }
+        }
+    </script>
+</body>
+
 </html>

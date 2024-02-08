@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Andrew Chung-ang Tsao</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap"
+        rel="stylesheet">
+    <style>
+        html {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Raleway", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 200;
+            font-style: normal;
+        }
+
+        body {
+            background-color: #000000;
+            margin: 0px;
+            padding: 0px;
+            color: #f2efe2;
+        }
+
+        .logo img {
+            height: 60px;
+            width: auto;
+        }
+
+        .header {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            padding: 1% 1%;
+            background: #000000;
+            color: #fdd000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+            z-index: 100;
+        }
+
+        .navbar a {
+            box-shadow: inset 0 0 0 0 #e3a765;
+            color: #fdd000;
+            transition: color .5s ease-in-out, box-shadow .3s ease-in-out;
+            font-size: 20px;
+            text-decoration: none;
+            padding: 0 15px;
+        }
+
+        .navbar a.current {
+            color: #5d6d7c;
+            text-decoration: underline;
+        }
+
+        .navbar a:hover {
+            color: #f2efe2;
+            box-shadow: inset 200px 0 0 0 #e3a765;
+        }
+
+        .navbar-toggler {
+            display: none;
+            font-size: 24px;
+            background: none;
+            border: none;
+            color: #fdd000;
+            cursor: pointer;
+
+        }
+
+        .container {
+            margin-top: 17%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+
+        .project {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: #5d6d7c;
+            border: 1px solid #e3a765;
+            padding: 20px;
+            border-radius: 5px;
+            color: #f2efe2;
+            height: 100%;
+        }
+
+        .project {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: #5d6d7c;
+            border: 1px solid #e3a765;
+            padding: 20px;
+            border-radius: 5px;
+            color: #f2efe2;
+            height: 100%;
+            transition: background-color 0.5s ease;
+        }
+
+        .project:hover {
+            background-color: transparent;
+        }
+
+        .project h2 {
+            color: #fdd000;
+            margin-top: 0;
+        }
+
+        .project p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .project-links a {
+            overflow: hidden;
+            position: relative;
+            display: inline-block;
+            text-decoration: none;
+            color: #e3a765;
+            font-weight: 700;
+            vertical-align: top;
+            margin-right: 15px;
+        }
+
+        .project-links a::before,
+        .project-links a::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            left: 0;
+        }
+
+        .project-links a::before {
+            background-color: transparent;
+            height: 2px;
+            bottom: 0;
+            transform-origin: 100% 50%;
+            transform: scaleX(0);
+            transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+        }
+
+        .project-links a::after {
+            content: attr(data-replace);
+            height: 100%;
+            top: 0;
+            transform-origin: 100% 50%;
+            transform: translate3d(200%, 0, 0);
+            transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+            color: #000000;
+        }
+
+        .project-links a:hover::before {
+            transform-origin: 0% 50%;
+            transform: scaleX(1);
+        }
+
+        .project-links a:hover::after {
+            transform: translate3d(0, 0, 0);
+        }
+
+        .project-links a span {
+            display: inline-block;
+            transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+        }
+
+        .project-links a:hover span {
+            transform: translate3d(-200%, 0, 0);
+        }
+
+        @media only screen and (max-width: 768px) {
+            .navbar-toggler {
+                display: block;
+            }
+
+            .navbar {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                background-color: #000;
+            }
+
+            .navbar a {
+                display: block;
+                width: 100%;
+                text-align: center;
+                padding: 10px;
+                border-top: 1px solid #e3a765;
+            }
+
+            .header {
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 10px;
+            }
+
+            .logo img {
+                height: 40px;
+            }
+
+            .container {
+                margin-top: 60px;
+                padding: 0 20px;
+            }
+
+            .projects-grid {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 20px;
+                padding: 0;
+            }
+
+            .project {
+                padding: 15px;
+                margin-bottom: 20px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+
+
+
+            .project p {
+                font-size: 14px;
+            }
+
+            .project-links a {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo">
+            <img src="../logo.jpg" alt="Andrew's Logo">
+        </a>
+        <nav class="navbar" id="navbarMenu">
+            <a href="../">Home</a>
+            <a href="../about/">About</a>
+            <a href="#" class="current">Projects</a>
+            <a href="../contact/">Contact</a>
+            <a href="../more/">More</a>
+        </nav>
+        <button class="navbar-toggler" type="button" onclick="toggleNavbar()">
+            <span class="navbar-toggler-icon">&#9776;</span>
+        </button>
+    </header>
+    <main class="container">
+        <section class="projects-grid">
+            <article class="project">
+                <h2>GameDigger</h2>
+                <p>A Java server with MySQL database featuring Steam data to generate personalized game recommendations
+                    based on user interests and activity.</p>
+                <div class="project-links">
+                    <a href="#" data-replace="Private"><span>Learn More</span></a>
+                </div>
+            </article>
+            <article class="project">
+                <h2>Theater Reserver</h2>
+                <p>A straightforward Java application that manages seat reservations across theaters of various sizes,
+                    enhancing your cinematic experience.</p>
+                <div class="project-links">
+                    <a href="#" data-replace="Private"><span>Learn More</span></a>
+                </div>
+            </article>
+            <article class="project">
+                <h2>Future Projects</h2>
+                <p>Stay tuned for more innovative creations that blend technology and imagination, to be announced soon.
+                </p>
+                <div class="project-links">
+                    <a href="#" data-replace="Coming Soon"><span>Discover</span></a>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <script>
+        function toggleNavbar() {
+            var element = document.getElementById("navbarMenu");
+            if (element.style.display === "block") {
+                element.style.display = "none";
+            } else {
+                element.style.display = "block";
+            }
+        }
+    </script>
+</body>
+
+</html>

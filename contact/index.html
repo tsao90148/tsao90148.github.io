@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Andrew Chung-ang Tsao</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <style>
+        html {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Raleway", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 200;
+            font-style: normal;
+        }
+
+        body {
+            height: 100%;
+            background-color: #000000;
+            margin: 0px;
+            padding: 0px;
+            color: #f2efe2;
+        }
+
+        main.container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0 auto;
+        }
+
+        .logo img {
+            height: 60px;
+            width: auto;
+        }
+
+        .header {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            padding: 1% 1%;
+            background: #000000;
+            color: #fdd000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+            z-index: 100;
+        }
+
+        .navbar a {
+            box-shadow: inset 0 0 0 0 #e3a765;
+            color: #fdd000;
+            transition: color .5s ease-in-out, box-shadow .3s ease-in-out;
+            font-size: 20px;
+            text-decoration: none;
+            padding: 0 15px;
+        }
+
+        .navbar a.current {
+            color: #5d6d7c;
+            text-decoration: underline;
+        }
+
+        .navbar a:hover {
+            color: #f2efe2;
+            box-shadow: inset 200px 0 0 0 #e3a765;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.8rem;
+            color: #5d6d7c;
+        }
+
+        .navbar-toggler {
+            display: none;
+            font-size: 24px;
+            background: none;
+            border: none;
+            color: #fdd000;
+            cursor: pointer;
+
+        }
+
+        .svg-inline--fa {
+            vertical-align: -0.200em;
+        }
+
+        .rounded-social-buttons {
+            text-align: center;
+        }
+
+        .rounded-social-buttons .social-button {
+            display: inline-block;
+            position: relative;
+            cursor: pointer;
+            width: 3.125rem;
+            height: 3.125rem;
+            border: 0.125rem solid transparent;
+            padding: 0;
+            text-decoration: none;
+            text-align: center;
+            color: #fefefe;
+            font-size: 1.5625rem;
+            font-weight: normal;
+            line-height: 2em;
+            border-radius: 1.6875rem;
+            transition: all 0.5s ease;
+            margin-right: 0.25rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .rounded-social-buttons .social-button:hover,
+        .rounded-social-buttons .social-button:focus {
+            -webkit-transform: rotate(360deg);
+            -ms-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+
+        .rounded-social-buttons .fa-twitter,
+        .fa-facebook-f,
+        .fa-linkedin,
+        .fa-youtube,
+        .fa-instagram {
+            font-size: 25px;
+        }
+
+        .rounded-social-buttons .social-button.facebook {
+            background: #3b5998;
+        }
+
+        .rounded-social-buttons .social-button.facebook:hover,
+        .rounded-social-buttons .social-button.facebook:focus {
+            color: #3b5998;
+            background: #fefefe;
+            border-color: #3b5998;
+        }
+
+        .rounded-social-buttons .social-button.twitter {
+            background: #55acee;
+        }
+
+        .rounded-social-buttons .social-button.twitter:hover,
+        .rounded-social-buttons .social-button.twitter:focus {
+            color: #55acee;
+            background: #fefefe;
+            border-color: #55acee;
+        }
+
+        .rounded-social-buttons .social-button.linkedin {
+            background: #007bb5;
+        }
+
+        .rounded-social-buttons .social-button.linkedin:hover,
+        .rounded-social-buttons .social-button.linkedin:focus {
+            color: #007bb5;
+            background: #fefefe;
+            border-color: #007bb5;
+        }
+
+        .rounded-social-buttons .social-button.youtube {
+            background: #bb0000;
+        }
+
+        .rounded-social-buttons .social-button.youtube:hover,
+        .rounded-social-buttons .social-button.youtube:focus {
+            color: #bb0000;
+            background: #fefefe;
+            border-color: #bb0000;
+        }
+
+        .rounded-social-buttons .social-button.instagram {
+            background: #125688;
+        }
+
+        .rounded-social-buttons .social-button.instagram:hover,
+        .rounded-social-buttons .social-button.instagram:focus {
+            color: #125688;
+            background: #fefefe;
+            border-color: #125688;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .navbar-toggler {
+                display: block;
+            }
+
+            .navbar {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                background-color: #000;
+            }
+
+            .navbar a {
+                display: block;
+                width: 100%;
+                text-align: center;
+                padding: 10px;
+                border-top: 1px solid #e3a765;
+            }
+
+            .header {
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 10px;
+            }
+
+            .logo img {
+                height: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo">
+            <img src="../logo.jpg" alt="Andrew's Logo">
+        </a>
+        <nav class="navbar" id="navbarMenu">
+            <a href="../">Home</a>
+            <a href="../about/">About</a>
+            <a href="../projects/">Projects</a>
+            <a href="#" class="current">Contact</a>
+            <a href="../more/">More</a>
+        </nav>
+        <button class="navbar-toggler" type="button" onclick="toggleNavbar()">
+            <span class="navbar-toggler-icon">&#9776;</span>
+        </button>
+    </header>
+
+    <main class="container">
+        <div class="rounded-social-buttons">
+            <a class="social-button facebook" href="https://www.facebook.com/" target="_blank"><i
+                    class="fab fa-facebook-f"></i></a>
+            <a class="social-button twitter" href="https://www.twitter.com/" target="_blank"><i
+                    class="fab fa-twitter"></i></a>
+            <a class="social-button linkedin" href="https://www.linkedin.com/" target="_blank"><i
+                    class="fab fa-linkedin"></i></a>
+            <a class="social-button youtube" href="https://www.youtube.com/" target="_blank"><i
+                    class="fab fa-youtube"></i></a>
+            <a class="social-button instagram" href="https://www.instagram.com/" target="_blank"><i
+                    class="fab fa-instagram"></i></a>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2024 Andrew Chung-ang Tsao. All rights reserved.</p>
+    </footer>
+    <script>
+        function toggleNavbar() {
+            var element = document.getElementById("navbarMenu");
+            if (element.style.display === "block") {
+                element.style.display = "none";
+            } else {
+                element.style.display = "block";
+            }
+        }
+    </script>
+</body>
+
+</html>
